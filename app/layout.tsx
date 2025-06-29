@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './style/globals.css';
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/providers/theme-provider"
 import { DebugPanel } from '@/components/common/debug-panel';
 
 
