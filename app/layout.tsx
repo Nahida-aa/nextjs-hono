@@ -1,5 +1,9 @@
 import type { Metadata } from 'next'
-import './globals.css';
+import './style/globals.css';
+import { ThemeProvider } from "@/components/theme-provider"
+import { DebugPanel } from '@/components/common/debug-panel';
+
+
 
 export const metadata: Metadata = {
   title: 'Hono | nextjs',
@@ -11,9 +15,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  )
+  return <html lang="en">
+    <body>          
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        {children}
+        <DebugPanel />
+      </ThemeProvider>
+    </body>
+  </html>
 }

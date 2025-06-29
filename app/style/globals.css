@@ -1,5 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "tailwindcss";
+@plugin './hero.ts';
+/* // Note: You may need to change the path to fit your project structure */
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -83,8 +87,9 @@
   --card-foreground: oklch(0.985 0.001 106.423);
   --popover: oklch(0.216 0.006 56.043);
   --popover-foreground: oklch(0.985 0.001 106.423);
-  --primary: oklch(0.923 0.003 48.717);
-  --primary-foreground: oklch(0.216 0.006 56.043);
+  --primary: oklch(0.5134 0.2321 277.35);
+  --primary-v: hsl(244, 77%, 59%);
+  --primary-foreground: oklch(0.9468 0.0042 56.37);
   --secondary: oklch(0.268 0.007 34.298);
   --secondary-foreground: oklch(0.985 0.001 106.423);
   --muted: oklch(0.268 0.007 34.298);
